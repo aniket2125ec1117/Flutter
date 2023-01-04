@@ -1,0 +1,11 @@
+void main()
+{
+  String a = 'hi i am aniket .';
+  String b = 'Aniket ';
+  String c = '''hi 
+  what are you doing 
+  nice to meet you ''';
+  print(a);
+  print(b);
+  print(c);
+}
