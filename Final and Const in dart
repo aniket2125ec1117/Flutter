@@ -1,0 +1,28 @@
+void main()
+{
+  final String name = 'Raman';
+  final String ok;
+  ok = 'Ankit';
+  const king = 'Aniket';
+  // const String po ;
+  // po = "heheh"; Not possible in const only done in the final.
+  final name1 = [
+    "Raman",
+    "Aman",
+    "Aniket"
+    ];
+  // name1 = ["pooja ","peter"]; this will throw an error
+  name1.add("ki ho");
+  print(name1);
+  // const name2 = [
+  //   "Raman",
+  //   "Aman",
+  //   "Aniket"
+  // ];
+  //
+  // name2.add("ki ho");
+  // print(name2); this will throw an error if we 
+  // reassign value in const.we can reassign value in final keyword.
+  // but not in const.
+
+}
