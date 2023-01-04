@@ -1,0 +1,26 @@
+void main()
+{
+  var map_name = {
+    'Key1' : 'Value1',
+    'Key2' : 2,
+    'Key3' : 3.0,
+    'Key4' : true
+  };
+  map_name['Key5'] = 78;
+  print(map_name);
+  print(map_name['Key2']);
+  print(map_name['Key5']);
+  var mapName = Map();
+  mapName['key1'] = 89;
+  mapName['key2'] = 9.0;
+  mapName['key3'] = true;
+  print(mapName);
+  print(mapName.isEmpty);
+  print(mapName.length);
+  print(mapName.isNotEmpty);
+  print(mapName.values);
+  print(mapName.containsKey('key1'));
+  print(mapName.containsValue(true));
+  print(mapName.remove('key1'));
+  print(mapName);
+}
