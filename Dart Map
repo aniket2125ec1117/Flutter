@@ -1,0 +1,19 @@
+void main() {
+  // Note: use of var!
+  var daysInWeek = new Map();
+
+  daysInWeek[0] = 'Sun';
+  daysInWeek[1] = 'Mon';
+  daysInWeek[2] = 'Tues';
+
+  print('Hello $daysInWeek');
+  var Family = new Map();
+  Family[0] = 'Aniket';
+  Family[1] = 'Jeet';
+  Family[2] = 'Ankit';
+  Family[3] = 98;
+  Family[4] = 78.9;
+  Family[5] = false;
+  print("hello $Family");
+  
+}
