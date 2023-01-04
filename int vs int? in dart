@@ -1,0 +1,15 @@
+int x; // x has value as null
+int x = 0; // x is initialized as zero
+
+Both the above code are fine and compilable code. But if you enable Dart's null-safety feature, which you should, it will make the above code work differently.
+
+int x; // compilation error: "The non-nullable variable must be assigned before can be used"
+int x = 0; // No Error.
+
+This is an effort made from the compiler to warn you wherever your variable can be null, but during the compile time. Awesome.
+
+But what happens, if you must declare a variable as null because you don't know the value at the compile time.
+
+int? x; // Compiles fine because it's a nullable variable
+
+The ? is a way for you tell the compiler that you want this variable to allow null. However, when you say a variable can be null, then every time you use the variable, the compiler will remind you to check whether the variable is null or not before you can use it.
