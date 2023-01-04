@@ -1,0 +1,17 @@
+import 'dart:io';
+
+void main()
+{
+
+  int? number = stdin.readByteSync(); // to take integer user input
+  String? a = stdin.readLineSync(); // this will be used in user input as a string
+
+  if(number>=10)
+    {
+      stdout.write("entered number is greather than 10 .");
+    }
+  else
+    {
+      stdout.write("entered number is less than 10.");
+    }
+}
