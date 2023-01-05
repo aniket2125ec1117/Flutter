@@ -1,0 +1,297 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    var arrName = ['Aniket','Ankit','Aditi','Alok','Jeet'];
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: Text('Aniket')),
+        backgroundColor: Colors.amberAccent,
+      ),
+      // body : Center(
+      //   child: Container(
+      //     width: 100,
+      //     height: 100,
+      //     color: Colors.amber,
+      //     child:  Center(child: Text('Hello Aniket')),
+      //   ),
+      // ),
+
+      // body: Center(
+      //   child: Text('Hello World', style : TextStyle(fontSize: 25)),,
+      // ),
+
+      // ), // This trailing comma makes auto-formatting nicer for build methods.
+      // body: Center(
+      //   child: Container(
+      //     height: 100,
+      //     width: 200,
+      //     color: Colors.black,
+      //     child: Center(
+      //       child: Text('Hello dart' , style: TextStyle(
+      //         color: Colors.white,
+      //         fontWeight: FontWeight.bold,
+      //
+      //         fontSize: 25
+      //
+      //       ),),
+      //     ),
+      //   ),
+      //
+      // ),
+      //   body: TextButton(
+      //     child: Text('Click here!!'),
+      //     onPressed: (){
+      //       print('Text button Tapped!');
+      //     },
+      //     onLongPress: (){
+      //       print('Kiya dekkh raha hai binod');
+      //     },
+      //
+      //   ),
+      //
+      //   body: Center(
+      //     child: OutlinedButton(
+      //       child: Text('Outline button'),
+      //       onPressed: ()
+      //       {
+      //         print('Outline button');
+      //       },
+      //       onLongPress: ()
+      //       {
+      //         print("how are you?");
+      //       },
+      //
+      //     ),
+      //   ),
+      // body: Center(
+      //
+      //   child: Container(
+      //     height: 100,
+      //     width: 100,
+      //     child: Image.asset('assets/1.png'),
+      //
+      //   ),
+      //
+      // ),
+      //   body: Container(
+      //
+      //     child: Column(
+      //       mainAxisAlignment: MainAxisAlignment.start,
+      //       crossAxisAlignment: CrossAxisAlignment.start,
+      //       children: [
+      //         Row(
+      //           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //           children: [
+      //             Column(
+      //               children: [
+      //                 Text('1'),
+      //                 Text('2'),
+      //                 ElevatedButton(onPressed: (){}, child:
+      //                 Text('hey')),
+      //                 ElevatedButton(onPressed:(){}, child:
+      //                 Text('How are you?'))
+      //               ],
+      //
+      //             ),
+      //             Text('c'),
+      //             Text('o'),
+      //             Text('l'),
+      //           ],
+      //         ),
+      //         Text('A'),
+      //         Text('B'),
+      //         Text('C'),
+      //         ElevatedButton(onPressed: (){},
+      //             child: Text('Helllo ') )
+      //       ],
+      //     ),
+      //   ),
+      // body: Center(
+      //   child: InkWell(
+      //     onTap: (){
+      //       print('Tapped on container');
+      //     },
+      //     onLongPress: (){
+      //       print('Long pressed');
+      //     },
+      //     onDoubleTap: (){
+      //       print('Double tapped');
+      //     },
+      //     child: Container(
+      //       width: 200,
+      //       height: 200,
+      //       color: Colors.amber,
+      //       child: Center(
+      //       child: InkWell(
+      //         onTap: (){
+      //           print('Clicked on text');
+      //         },
+      //           onDoubleTap: (){
+      //           print('Double tapped on text.');
+      //           },
+      //           onLongPress: (){
+      //           print('Long press on text.');
+      //           },
+      //           child: Text('Enter here', style: TextStyle(fontSize: 21,fontWeight: FontWeight.w900), ))// inkwell is used to make anything work like a button
+      //       ),
+      //     ),
+      //   ),
+      // ),
+      // body: Padding(
+      //   padding: const EdgeInsets.all(8.0),
+      //   child: SingleChildScrollView(
+      //     child: Column(
+      //       children: [
+      //         Padding(
+      //           padding: const EdgeInsets.all(8.0),
+      //           child: SingleChildScrollView(
+      //             scrollDirection: Axis.horizontal,
+      //             child: Row(
+      //               children:[ Container(
+      //
+      //                 margin: EdgeInsets.only(bottom: 10),
+      //                 height: 150,
+      //                 width: 150,
+      //
+      //                 color: Colors.purple,
+      //               ),
+      //                 Container(
+      //
+      //                   margin: EdgeInsets.only(bottom: 10,left: 10),
+      //                   height: 150,
+      //                   width: 150,
+      //
+      //                   color: Colors.grey,
+      //                 ),
+      //                 Container(
+      //
+      //                   margin: EdgeInsets.only(bottom: 10,left: 10),
+      //                   height: 150,
+      //                   width: 150,
+      //
+      //                   color: Colors.orange,
+      //                 ),
+      //                 Container(
+      //
+      //                   margin: EdgeInsets.only(bottom: 10,left: 10),
+      //                   height: 150,
+      //                   width: 150,
+      //
+      //                   color: Colors.redAccent,
+      //                 ),
+      //                 Container(
+      //
+      //                   margin: EdgeInsets.only(bottom: 10,left: 10),
+      //                   height: 150,
+      //                   width: 150,
+      //
+      //                   color: Colors.purpleAccent,
+      //                 ),
+      //
+      //   ],
+      //             ),
+      //           ),
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 10,top: 10),
+      //           height: 200,
+      //
+      //           color: Colors.red,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 10,top: 10),
+      //           height: 200,
+      //
+      //           color: Colors.green,
+      //         ),
+      //         Container(
+      //           margin: EdgeInsets.only(bottom: 10,top: 10),
+      //           height: 200,
+      //
+      //           color: Colors.yellow,
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      // ),
+      // body:ListView(
+      //   scrollDirection: Axis.vertical,
+      //   reverse: true,
+      //   children: [
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Text('One',style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400)),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Text('Two',style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400)),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Text('Three',style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400)),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Text('Four',style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400)),
+      //     ),
+      //     Padding(
+      //       padding: const EdgeInsets.all(8.0),
+      //       child: Text('Five',style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400)),
+      //     ),
+      //   ],
+      // ) ,
+      body: ListView.separated(itemBuilder: (context, index){
+        return Text(arrName[index], style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700),);
+      },
+      itemCount: arrName.length,
+        // itemExtent: 100, this is used in ListView.builder
+        // scrollDirection: Axis.horizontal,
+
+        // reverse: true,
+        separatorBuilder: (context,index){
+        return Divider(height: 100, thickness: 4,color: Colors.purpleAccent,);
+        },
+      )
+    );
+  }
+}
