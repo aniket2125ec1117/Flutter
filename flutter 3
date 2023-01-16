@@ -1,0 +1,133 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_3/ui_helper/util.dart';
+import 'package:intl/intl.dart';
+
+void main() {
+  runApp(FlutterApp());
+}
+
+class FlutterApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialApp(
+      title: "MyFirstApp",
+      debugShowCheckedModeBanner: false,
+      color: Colors.red,
+      theme: ThemeData(
+          primaryColor: Colors.blue,
+          textTheme: TextTheme(
+              headline1: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w500,
+                  fontStyle: FontStyle.italic),
+              subtitle1: TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w200,
+                  fontFamily: 'FontMain'))),
+      home: DashBoard(),
+    );
+  }
+}
+
+class DashBoard extends StatelessWidget {
+  var arrName = [
+    'Ram',
+    'Shyam',
+    'Sita',
+    'Ankit',
+    'Aniket',
+    'Shaksham',
+    'Tushar',
+    'Dishant',
+    'Paradox',
+    'Badshah'
+  ];
+  @override
+  Widget build(BuildContext context) {
+    var time = DateTime.now();
+    // TODO: implement build
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: Text('DashBoard')),
+      ),
+
+      // body:  ListView.separated(itemBuilder: (context,index)
+      // {
+      //   return ListTile(
+      //     leading: Text('${index+1}'),
+      //     title: Text(arrName[index]),
+      //     subtitle: Text('Number'),
+      //     trailing: Icon(Icons.add),
+      //   );
+      // },
+      // itemCount: arrName.length,
+      // separatorBuilder: (context,index){
+      //   return Divider(height: 10, thickness: 1,);
+      // },),
+      // body: Center(
+      //   child: CircleAvatar(
+      //     child: Container(
+      //       width: 100,
+      //       height: 100,
+      //       child: Column(
+      //         children: [
+      //           Container(
+      //             width: 50,
+      //             height: 50,
+      //             child: Image.asset('assets/images/2.png'),
+      //           ),
+      //           Text('Aniket')
+      //         ],
+      //       ),
+      //     ),
+      //     // backgroundImage: AssetImage('assets/images/2.png'),
+      //     backgroundColor: Colors.green,
+      //     maxRadius: 100,
+      //     minRadius: 50,
+      //   ),
+      //
+      // body:  Center(
+      //     child: Text('Hello' ,style: TextStyle(fontFamily: 'FontMain', fontWeight: FontWeight.w500,fontSize: 25),)),
+
+      // body: Column(
+      //   children: [
+      //     Text('Text 1', style: Theme.of(context).textTheme.headline1,),
+      //     Text('Text 2', style: Theme.of(context).textTheme.subtitle1,),
+      //     Text('Hello', style: Theme.of(context).textTheme.headline1!.copyWith(color: Colors.orange)),
+      //     Text('Aniket' , style: mTextStyle11( ))
+      //   ],
+      // ),
+      // body: Center(
+      //   child: Card(
+      //     shadowColor: Colors.blue,
+      //       elevation: 5,
+      //       child: Padding(
+      //
+      //     padding: const EdgeInsets.all(10),
+      //       child : Text('hello world'))),
+      // ),
+      body: Center(
+          child: Container(
+        width: 200,
+        height: 200,
+        child: Column(
+          children: [
+            Text(
+              'Current time : ${DateFormat('Hms').format(time)}',
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w900),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                elevation: 10,
+                child: ElevatedButton(
+                    onPressed: () {}, child: Text('Current date')),
+              ),
+            )
+          ],
+        ),
+      )),
+    );
+  }
+}
